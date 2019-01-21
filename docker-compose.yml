@@ -1,0 +1,7 @@
+version: '2'
+services:
+  app:
+    build: .
+    image: distributor.support.bot:v2
+    ports: 
+      - "8083:8083"
