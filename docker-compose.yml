@@ -3,5 +3,6 @@ services:
   app:
     build: .
     image: distributor.support.bot:v2
+    restart: always
     ports: 
       - "8083:8083"
