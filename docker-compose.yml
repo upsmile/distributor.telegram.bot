@@ -1,8 +1,8 @@
-version: '2'
+version: '3.7'
 services:
   app:
     build: .
-    image: distributor.support.bot:v2
+    image: distributor.support.bot.dwh:v3
     restart: always
     ports: 
-      - "8083:8083"
+      - "8084:8084"

@@ -9,6 +9,6 @@ WORKDIR /vendors/vibora
 RUN python build.py
 WORKDIR /vendors
 RUN pip install ./vibora
-EXPOSE 8083/tcp
+EXPOSE 8084/tcp
 WORKDIR /
 ENTRYPOINT ["python", "./app.py"]

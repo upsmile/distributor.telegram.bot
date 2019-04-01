@@ -11,16 +11,16 @@ logging.basicConfig(level=logging.INFO,
 #@upsmile_bot
 # https://t.me/
 app = Vibora()
-bot = telegram.Bot(token=r'552921360:AAHPKp77QI6pn2RKaMLWmxrCsDeyDWfPzEE')
-bot.send_message(chat_id='@upsmile', text="The bot-service successfully started.")
+bot = telegram.Bot(token=r'621349315:AAGa0VrOyIK36NNvSisZtlX5QzBo9xJcTl8')
+bot.send_message(chat_id='@distributordwh', text="The bot-service successfully started.")
 
 @app.route('/')
 async def index():
     
     response =  JsonResponse({
-        "name":"distributor.support.bot.host",
+        "name":"distributor.support.bot.dwh",
         "version": __version__})    
-    bot.send_message(chat_id='@upsmile', text="distributor.support.bot.host")
+    bot.send_message(chat_id='@distributordwh', text="distributor.support.bot.dwh")
     return response    
 
 
@@ -29,8 +29,8 @@ async def post(request: Request):
     values = await request.stream.read()
     message = values.decode(encoding="utf8")
     logging.info(message)
-    bot.send_message(chat_id='@upsmile', text=message)
+    bot.send_message(chat_id='@distributordwh', text=message)
     return Response(b'ok',status_code=200)   
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8083)
+    app.run(host="0.0.0.0", port=8084)
